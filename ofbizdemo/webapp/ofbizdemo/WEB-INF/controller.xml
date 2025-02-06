@@ -56,6 +56,12 @@ under the License.
         <response name="success" type="view" value="main"/>
     </request-map>
 
+    <request-map uri="createOfbizDemoByGroovy">
+        <security https="true" auth="true"/>
+        <event type="service" invoke="createOfbizDemoByGroovy"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
+
     <request-map uri="createOfbizDemo">
         <security https="true" auth="true"/>
         <event type="service" invoke="createOfbizDemo"/>

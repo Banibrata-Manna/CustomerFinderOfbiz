@@ -19,20 +19,26 @@ under the License.
 -->
 
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/services.xsd">
-    <description>Ofbizdemo Services</description>
+          xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/services.xsd">
+  <description>Ofbizdemo Services</description>
 
-    <service name="createOfbizDemo" engine="entity-auto" invoke="create" default-entity-name="OfbizDemo">
-        <auto-attributes mode="IN" entity-name="OfbizDemo" include="nonpk"/>
-        <auto-attributes mode="OUT" entity-name="OfbizDemo" include="pk"/>
-        <override name="comments" optional="true"/>
-    </service> 
-    
-    <service name="createOfbizDemoByJava" engine="java" default-entity-name="OfbizDemo"
-             location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createOfbizDemo">
-        <auto-attributes mode="IN" entity-name="OfbizDemo" include="nonpk"/>
-        <auto-attributes mode="OUT" entity-name="OfbizDemo" include="pk"/>
-        <override name="comments" optional="true"/>
-    </service>
-    
+  <service name="createOfbizDemo" engine="entity-auto" invoke="create" default-entity-name="OfbizDemo">
+    <auto-attributes mode="IN" entity-name="OfbizDemo" include="nonpk"/>
+    <auto-attributes mode="OUT" entity-name="OfbizDemo" include="pk"/>
+    <override name="comments" optional="true"/>
+  </service>
+
+  <service name="createOfbizDemoByJava" engine="java" default-entity-name="OfbizDemo"
+           location="com.companyname.ofbizdemo.services.OfbizDemoServices" invoke="createOfbizDemo">
+    <auto-attributes mode="IN" entity-name="OfbizDemo" include="nonpk"/>
+    <auto-attributes mode="OUT" entity-name="OfbizDemo" include="pk"/>
+    <override name="comments" optional="true"/>
+  </service>
+
+  <service name="createOfbizDemoByGroovy" engine="groovy" default-entity-name="OfbizDemo"
+            location="component://ofbizdemo/groovyScripts/OfbizDemoServices.groovy" invoke="createOfbizDemoServiceByGroovy">
+    <auto-attributes mode="IN" entity-name="OfbizDemo" include="nonpk"/>
+    <auto-attributes mode="OUT" entity-name="OfbizDemo" include="pk"/>
+    <override name="comments" optional="true"/>
+  </service>
 </services>

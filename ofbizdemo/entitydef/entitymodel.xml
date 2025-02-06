@@ -19,28 +19,28 @@ under the License.
 -->
 
 <entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/entitymodel.xsd">
-    <!-- ========================================================= -->
-    <!-- ======================== Defaults ======================= -->
-    <!-- ========================================================= -->
-    <title>Entity of Ofbizdemo Component</title>
-    
-    <entity entity-name="OfbizDemo" package-name="org.apache.ofbiz.ofbizdemo">
-        <field name="ofbizDemoId" type="id"/>
-        <field name="ofbizDemoTypeId" type="id"/>
-        <field name="firstName" type="name"/>
-        <field name="lastName" type="name"/>
-        <field name="comments" type="comment"/>
-        <prim-key field="ofbizDemoId"/>
-        <relation type="one" rel-entity-name="OfbizDemoType">
-            <key-map field-name="ofbizDemoTypeId"/>
-        </relation>
-    </entity>
+             xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/entitymodel.xsd">
+  <!-- ========================================================= -->
+  <!-- ======================== Defaults ======================= -->
+  <!-- ========================================================= -->
+  <title>Entity of Ofbizdemo Component</title>
 
-    <entity entity-name="OfbizDemoType" package-name="org.apache.ofbiz.ofbizdemo">
-        <field name="ofbizDemoTypeId" type="id"/>
-        <field name="description" type="short-varchar"/>
-        <prim-key field="ofbizDemoTypeId"/>
-    </entity>
+  <entity entity-name="OfbizDemo" package-name="org.apache.ofbiz.ofbizdemo">
+    <field name="ofbizDemoId" type="id"/>
+    <field name="ofbizDemoTypeId" type="id"/>
+    <field name="firstName" type="name"/>
+    <field name="lastName" type="name"/>
+    <field name="comments" type="comment"/>
+    <prim-key field="ofbizDemoId"/>
+    <relation type="one" rel-entity-name="OfbizDemoType">
+      <key-map field-name="ofbizDemoTypeId"/>
+    </relation>
+  </entity>
+
+  <entity entity-name="OfbizDemoType" package-name="org.apache.ofbiz.ofbizdemo">
+    <field name="ofbizDemoTypeId" type="id"/>
+    <field name="description" type="short-varchar"/>
+    <prim-key field="ofbizDemoTypeId"/>
+  </entity>
 
 </entitymodel>
