@@ -31,9 +31,10 @@ public class OfbizDemoEvents{
 
     try {
       Debug.logInfo("=======Creating OfbizDemo record in event using service createOfbizDemoByGroovyService=========", MODULE);
-      dispatcher.runSync("createOfbizDemoByGroovyService", UtilMisc.toMap("ofbizDemoTypeId", ofbizDemoTypeId,
+      dispatcher.runSync("createOfbizDemoByGroovy", UtilMisc.toMap("ofbizDemoTypeId", ofbizDemoTypeId,
           "firstName", firstName, "lastName", lastName, "comments", comments, "userLogin", userLogin));
     } catch (GenericServiceException e) {
+      Debug.logError(e, MODULE);
       request.setAttribute("_ERROR_MESSAGE_", "failed to create record");
       return "error";
     }

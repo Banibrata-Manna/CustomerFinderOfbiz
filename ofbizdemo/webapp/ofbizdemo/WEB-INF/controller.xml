@@ -74,7 +74,15 @@ under the License.
         <response name="success" type="view" value="main"/>
         <response name="error" type="view" value="main"/>
     </request-map>
+
+    <!--Request Mapping-->
+    <request-map uri="AddOfbizDemoFtl">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="AddOfbizDemoFtl"/>
+    </request-map>
+
     <!-- View Mappings -->
+    <view-map name="AddOfbizDemoFtl" type="screen" page="component://ofbizdemo/widget/OfbizdemoScreens.xml#AddOfbizDemoFtl"/>
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizdemo/widget/OfbizdemoScreens.xml#FindOfbizDemo"/>
     <view-map name="main" type="screen" page="component://ofbizdemo/widget/OfbizdemoScreens.xml#main"/>
 </site-conf>

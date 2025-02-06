@@ -50,7 +50,7 @@ under the License.
         <value xml:lang="en">Last Name</value>
     </property>
     <property key="OfbizdemoComment">
-        <value xml:lang="en">Last Name</value>
+        <value xml:lang="en">Comment</value>
     </property>
     <property key="OfbizdemoType">
         <value xml:lang="en">Type</value>

@@ -72,4 +72,30 @@ under the License.
             </widgets>
         </section>
     </screen>
+
+    <screen name="AddOfbizDemoFtl">
+        <section>
+            <actions>
+                <set field="titleProperty" value="PageTitleAddOfbizDemos"/>
+                <set field="headerItem" value="addOfbizDemoFtl"/>
+                <script location="component://ofbizdemo/webapp/ofbizdemo/WEB-INF/actions/crud/ListOfbizDemo.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <screenlet title="${uiLabelMap.OfbizDemoListOfbizDemos}">
+                            <platform-specific>
+                                <html><html-template location="component://ofbizdemo/webapp/ofbizdemo/crud/ListOfbizDemo.ftl"/></html>
+                            </platform-specific>
+                        </screenlet>
+                        <screenlet title="${uiLabelMap.OfbizDemoAddOfbizDemoServiceByFtl}">
+                            <platform-specific>
+                                <html><html-template location="component://ofbizdemo/webapp/ofbizdemo/crud/AddOfbizDemo.ftl"/></html>
+                            </platform-specific>
+                        </screenlet>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
 </screens>

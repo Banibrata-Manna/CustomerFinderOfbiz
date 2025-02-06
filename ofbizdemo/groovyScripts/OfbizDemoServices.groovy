@@ -15,7 +15,7 @@ def createOfbizDemoServiceByGroovy() {
     ofbizDemo.setNonPKFields(context);
     ofbizDemo = delegator.create(ofbizDemo);
     result.put("ofbizDemoId", ofbizDemo.ofbizDemoId);
-    logInfo("////////////////////////////Created " + ofbizDemo.ofbizDemoId + " ////////////////////////////////////")
+    logInfo("////////////////////////////Created " + ofbizDemo.ofbizDemoId + " ////////////////////////////////////");
   } catch (GenericEntityException e) {
     logError(e.getMessage());
   }
