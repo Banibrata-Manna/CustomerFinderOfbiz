@@ -29,7 +29,7 @@ under the License.
             <widgets>
                 <decorator-screen name="CustomerManagementCommonDecorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
-                        <include-form name="findCustomerForm" location="component://CustomerManagement/widget/CustomerManagementForms.xml"/>
+                        <include-form name="CreateCustomer" location="component://CustomerManagement/widget/CustomerManagementForms.xml"/>
                     </decorator-section>
                 </decorator-screen>
             </widgets>

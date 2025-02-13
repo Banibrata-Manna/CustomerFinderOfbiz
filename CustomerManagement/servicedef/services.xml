@@ -21,7 +21,12 @@ under the License.
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/services.xsd">
     <description>CustomerManagement Services</description>
-  <service name="create" engine="entity-auto" default-entity-name="findCustomerView">
-    <auto-attributes mode="INOUT" entity-name="findCustomerView"/>
+
+  <service name="createCustomerService" engine="java"
+            location="com.hotwax.customerManagement.services.CreateCustomerService"
+              invoke="createCustomer">
+    <attribute name="emailAddress" type="String" mode="IN"/>
+    <auto-attributes mode="IN" entity-name="Person" include="nonpk"/>
+    <auto-attributes mode="OUT" entity-name="Person" include="pk"/>
   </service>
 </services>
